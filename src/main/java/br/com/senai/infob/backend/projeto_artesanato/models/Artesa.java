@@ -1,7 +1,17 @@
 package br.com.senai.infob.backend.projeto_artesanato.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="artesa")
 public class Artesa {
     // Definicao de comentário
+    @Id 
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
     private String nome;
     private String email;
